@@ -10,7 +10,7 @@ public class RadioTest {
 
     @Test
     public void shouldUseConstructor() {
-        Radio radio = new Radio(35, 9, 5, true);
+        Radio radio = new Radio(5);
 
         assertEquals(35, radio.getCurrentVolume());
         assertEquals(8,radio.getMaxRadioStation());

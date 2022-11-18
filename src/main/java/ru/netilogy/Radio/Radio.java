@@ -13,11 +13,8 @@ public class Radio {
 
     }
 
-    public Radio(int currentVolume, int maxRadioStation, int currentRadioStation, boolean on) {
-        this.currentVolume = currentVolume;
-        this.maxRadioStation = maxRadioStation - 1;
+    public Radio( int currentRadioStation ) {
         this.currentRadioStation = currentRadioStation;
-        this.on = on;
     }
 
     public int getMaxVolume() {
