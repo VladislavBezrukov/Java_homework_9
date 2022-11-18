@@ -9,10 +9,29 @@ public class RadioTest {
     Radio radio = new Radio();
 
     @Test
+    public void shouldUseConstructor() {
+        Radio radio = new Radio(5);
+        assertEquals(5, radio.getCurrentRadioStation());
+    }
+
+    @Test
     public void validateChangeFields() {
         assertEquals(0, radio.getCurrentRadioStation());
         radio.setCurrentRadioStation(4);
         assertEquals(4, radio.getCurrentRadioStation());
+    }
+    @Test
+    public void afterInitialRadioStation() {
+        assertEquals(9,radio.getMaxRadioStation());
+        radio.setMaxRadioStation(6);
+        assertEquals(5, radio.getMaxRadioStation());
+    }
+
+    @Test
+    public void shouldTurnOffRadio() {
+        radio.setOn(false);
+        assertEquals(false, radio.isOn());
+
     }
 
     @Test
@@ -59,9 +78,8 @@ public class RadioTest {
 
     @Test
     public void volumeOverMax() {
-        radio.setCurrentVolume(11);
-        radio.getMaxVolume();
-        assertEquals(10, radio.getMaxVolume());
+        radio.setCurrentVolume(101);
+        assertEquals(100, radio.getMaxVolume());
     }
 
     @Test
@@ -85,6 +103,7 @@ public class RadioTest {
         assertEquals(3, radio.getCurrentVolume());
     }
 }
+
 
   
 
