@@ -11,11 +11,7 @@ public class RadioTest {
     @Test
     public void shouldUseConstructor() {
         Radio radio = new Radio(5);
-
-        assertEquals(35, radio.getCurrentVolume());
-        assertEquals(8,radio.getMaxRadioStation());
         assertEquals(5, radio.getCurrentRadioStation());
-        assertEquals(true, radio.isOn());
     }
 
     @Test

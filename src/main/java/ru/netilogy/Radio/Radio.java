@@ -14,7 +14,7 @@ public class Radio {
     }
 
     public Radio( int currentRadioStation ) {
-        this.currentRadioStation = currentRadioStation;
+        setCurrentRadioStation(currentRadioStation);
     }
 
     public int getMaxVolume() {
